@@ -31,14 +31,9 @@ public class TriagemTest {
     @Test
     public void Etapa2 () {
         Assert.assertTrue(triagem.Etapa2(doador1));
-        Assert.assertFalse(triagem.Etapa2(doador2));
-        Assert.assertFalse(triagem.Etapa2(doador3));
-        Assert.assertFalse(triagem.Etapa2(doador8));
-        Assert.assertTrue(triagem.Etapa2(doador4));
-        Assert.assertTrue(triagem.Etapa2(doador5));
-        Assert.assertTrue(triagem.Etapa2(doador6));
-        Assert.assertFalse(triagem.Etapa2(doador7));
-        Assert.assertFalse(triagem.Etapa2(doador9)); // gap
+        Assert.assertFalse(triagem.Etapa2(doador4));
+        Assert.assertFalse(triagem.Etapa2(doador5));
+        Assert.assertFalse(triagem.Etapa2(doador6));
         Assert.assertTrue(triagem.Etapa2(doador10));
     }
 

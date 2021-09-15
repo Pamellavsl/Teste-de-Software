@@ -5,8 +5,11 @@ public class Cadastro {
         Triagem triagem = new Triagem();
         Doador doador4 = new Doador("Patricia", 30, 60.5, "F", true, false,  false, false, false);
         Doador doador9 = new Doador("Carolina", 16, 49, "F", false, false,  false, false, false);
+        Doador doador2 = new Doador("Antonio", 60, 99, "M", false, false,  false, false, false);
+        Doador doador3 = new Doador("Amanda", 22, 49, "F", false, false,  false, false, false);
 
-        Boolean retorno = triagem.Etapa1(doador9);
+
+        Boolean retorno = triagem.Etapa2(doador4);
         System.out.println(retorno);
 
     }

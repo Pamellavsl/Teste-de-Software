@@ -31,8 +31,8 @@ public class Triagem {
                 System.out.println("Não é possível doar sangue: Doador está com febre");
                 return false;
 
-            } else if (doador.isEstaAmamentando()) {
-                System.out.println("Não é possível doar sangue: Doador está amamentando");
+            } else if (doador.isEstaGravida()) {
+                System.out.println("Não é possível doar sangue: Doador está grávida");
                 return false;
             } else if (doador.isEstaAmamentando() && doador.isTempParto()) {
                 System.out.println("Não é possível doar sangue: Parto aconteceu a menos de 12 meses");
