@@ -41,4 +41,21 @@ public class TriagemTest {
         Assert.assertTrue(triagem.Etapa2(doador10));
     }
 
+    @Test
+    public void autorizadoDoar() {
+        Assert.assertTrue(triagem.autorizadoDoar(doador1));
+        Assert.assertFalse(triagem.autorizadoDoar(doador2));
+        Assert.assertFalse(triagem.autorizadoDoar(doador3));
+        Assert.assertFalse(triagem.autorizadoDoar(doador4));
+        Assert.assertFalse(triagem.autorizadoDoar(doador5));
+        Assert.assertFalse(triagem.autorizadoDoar(doador6));
+        Assert.assertFalse(triagem.autorizadoDoar(doador7));
+        Assert.assertTrue(triagem.autorizadoDoar(doador8));
+        Assert.assertFalse(triagem.autorizadoDoar(doador9));
+        Assert.assertTrue(triagem.autorizadoDoar(doador10));
+        Assert.assertFalse(triagem.autorizadoDoar(doador11));
+        Assert.assertFalse(triagem.autorizadoDoar(doador12));
+
+    }
+
 }
