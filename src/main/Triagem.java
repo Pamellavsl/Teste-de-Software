@@ -1,3 +1,5 @@
+package main;
+
 public class Triagem {
 
 
@@ -27,25 +29,25 @@ public class Triagem {
 
     public boolean Etapa2 (Doador doador) {
 
-            if (doador.isEstaComFebre()) {
-                System.out.println("Etapa 2 -> Não é possível doar sangue: Doador " + doador.getNome() + " está com febre");
-                return false;
+        if (doador.isEstaComFebre()) {
+            System.out.println("Etapa 2 -> Não é possível doar sangue: Doador " + doador.getNome() + " está com febre");
+            return false;
 
-            } else if (doador.isEstaGravida()) {
-                System.out.println("Etapa 2 -> Não é possível doar sangue: Doador " + doador.getNome() + " está grávida");
-                return false;
-            } else if (doador.isEstaAmamentando() && doador.isTempParto()) {
-                System.out.println("Etapa 2 -> Não é possível doar sangue: Parto de "+ doador.getNome() + " aconteceu a menos de 12 meses");
-                return false;
-            }
-            return true;
-        }
-
-        public boolean autorizadoDoar (Doador doador) {
-            if (Etapa1(doador) && Etapa2(doador)) {
-                System.out.println(doador.getNome() + " aguarde na fila de doação");
-                return true;
-            }
+        } else if (doador.isEstaGravida()) {
+            System.out.println("Etapa 2 -> Não é possível doar sangue: Doador " + doador.getNome() + " está grávida");
+            return false;
+        } else if (doador.isEstaAmamentando() && doador.isTempParto()) {
+            System.out.println("Etapa 2 -> Não é possível doar sangue: Parto de "+ doador.getNome() + " aconteceu a menos de 12 meses");
             return false;
         }
+        return true;
+    }
+
+    public boolean autorizadoDoar (Doador doador) {
+        if (Etapa1(doador) && Etapa2(doador)) {
+            System.out.println(doador.getNome() + " aguarde na fila de doação");
+            return true;
+        }
+        return false;
+    }
 }

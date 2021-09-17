@@ -1,3 +1,5 @@
+package main;
+
 public class Doador {
     private String nome;
     private int idade;
@@ -21,6 +23,8 @@ public class Doador {
         this.jaDoouAnteriormente = jaDoouAnteriormente;
         this.estaComFebre = estaComFebre;
     }
+
+    public Doador(){}
 
     public String getNome() {
         return nome;
