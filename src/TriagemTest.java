@@ -13,6 +13,8 @@ public class TriagemTest {
     Doador doador8 = new Doador("Maria", 60, 60, "F", false, false,  false, true, false);
     Doador doador9 = new Doador("Carolina", 16, 49, "F", false, false,  false, false, false);
     Doador doador10 = new Doador("Pedro", 16, 60, "M", false, false,  false, false, false);
+    Doador doador11 = new Doador("Alexandre", -16, 60, "M", false, false,  false, false, false);
+    Doador doador12 = new Doador("Lucas", 16, -60, "M", false, false,  false, false, false);
 
     @Test
     public void Etapa1() {
@@ -26,6 +28,8 @@ public class TriagemTest {
         Assert.assertFalse(triagem.Etapa1(doador7));
         Assert.assertFalse(triagem.Etapa1(doador9)); // gap
         Assert.assertTrue(triagem.Etapa1(doador10));
+        Assert.assertFalse(triagem.Etapa1(doador11));
+        Assert.assertFalse(triagem.Etapa1(doador12));
     }
 
     @Test
